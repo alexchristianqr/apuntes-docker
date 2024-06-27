@@ -1,5 +1,5 @@
 # apuntes-docker
-README todo sobre Docker.
+Todo sobre docker: BASICO, INTERMEDIO y AVANZADO
 
 ## Ejecutar ejemplo con docker
 
