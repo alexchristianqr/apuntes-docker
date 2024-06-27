@@ -64,7 +64,7 @@ docker update --restart=always <id> # Actualizar un contenedor
 docker volume ls # Listar volumenes de docker
 ```
 
-## Plantilla avanzada docker-compose
+## Plantilla avanzada Dockerfile y docker-compose
 ```bash
 # Ejemplo estructura de un proyecto nodejs
 
