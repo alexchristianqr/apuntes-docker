@@ -16,6 +16,15 @@ docker run -dp 3000:3000 myapp
 # Incluye un argumento extra --add-host=
 # Ejemplo "networkLocalhost:MyIPv4"
 docker run -dp 3000:3000 --add-host=networkLocalhost:192.168.0.0 myapp
+
+# Detiene todos los contenedores en ejecución.
+# Elimina todos los contenedores detenidos.
+# Elimina todas las redes no utilizadas.
+# Elimina todos los volúmenes no utilizados.
+# Elimina todas las imágenes no utilizadas.
+docker stop $(docker ps -aq) && docker rm $(docker ps -aq) && docker network prune -f && docker volume prune -f && docker rmi -f $(docker images -q)
+
+
 ```
 
 ## Ejecutar ejemplo con docker-compose
@@ -23,6 +32,7 @@ docker run -dp 3000:3000 --add-host=networkLocalhost:192.168.0.0 myapp
 ```bash
 # Crear imagen y deplegar contenedor
 docker-compose up -d --build
+
 # Detener y eliminar contenedores, redes, volúmenes e imágenes
 docker-compose down -v --rmi all
 ```
